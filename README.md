@@ -41,4 +41,20 @@ Starting Ray Serve...
 
 Ray Dashboard will be available for monitoring the GPU node and application performance.
 
+## Benchmark
 
+Run benchmark program in the following configuration:
+
+1. To test 1,000 total request simulating 50 concurrent users:
+
+```
+python benchmark.py --n 1000 --c 50
+```
+
+2, To test batching capability by launching 500 requests mapping to arrays of 10 texts each (with 25 concurrent users):
+
+```
+python benchmark.py --n 500 --c 25 --batch-size 10
+```
+
+Either one will output detailed readout breaking down the metrics: min, 25th, median, 75th, max on both connection Latency and Requests-per-Second.
