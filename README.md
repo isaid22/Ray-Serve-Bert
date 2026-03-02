@@ -57,4 +57,7 @@ python benchmark.py --n 1000 --c 50
 python benchmark.py --n 500 --c 25 --batch-size 10
 ```
 
-Either one will output detailed readout breaking down the metrics: min, 25th, median, 75th, max on both connection Latency and Requests-per-Second.
+Either one will output detailed readout breaking down the metrics: min, 25th, median, 75th, max on both connection Latency and Requests-per-Second. And the GPU activities are shown with `nvtop`:
+
+![benchmark-ray-bert](benchmark-ray-bert.png)
+
